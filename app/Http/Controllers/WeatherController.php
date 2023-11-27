@@ -37,7 +37,7 @@ class WeatherController extends Controller
         $apiKey = 'e07b3a2c78c0f99da88f41305bccc3e9';
 
         // Make a request to the OpenWeatherMap API
-        $response = Http::get("https://api.openweathermap.org/data/2.5/weather?q=$city&appid=$apiKey");
+        $response = Http::get("https://api.openweathermap.org/data/2.5/weather?q=$city&units=metric&appid=$apiKey");
 
         // Parse the JSON response
         $weatherData = $response->json();
